@@ -1,0 +1,270 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    user-select: none;
+}
+
+body {
+    /* height: 100vh; */
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    background-color: #212125;
+    padding: 4em;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-container {
+    width: 100%;
+    height: auto;
+    border-radius: 1em;
+    background-color: #27272c;
+    padding: 2.5em;
+}
+
+header {
+    /* height: 10%; */
+    /* margin-bottom:25em; */
+    /* background-color: lightgreen; */
+    /* margin-bottom: 20px; */
+    height: 100px;
+    width: 100%;
+    /* height: 100px; */
+      margin-top: 2.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 750;
+    letter-spacing: 0.15em;
+    color: #f2f2f2;
+    text-transform: uppercase;
+}
+
+header .pesquisa-container {
+    width: 100%;
+    height: 15em;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .pesquisa-container input {
+    width: 75%;
+    flex-grow: 1;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    font-size: 1rem;
+    color: #27272c;
+    background-color: #f2f2f2;
+    border: 2.5px solid #212125;
+    padding: 1em;
+    border-radius: 0.75em;
+    transition: 0.25s linear;
+}
+
+header .pesquisa-container input:focus {
+    outline: none;
+    color: #eeaeca;
+    border-color: #eeaeca;
+}
+
+
+main {
+    flex-grow: 1;
+    width: 100%;
+    /* height: 80%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.galeria-container {
+    display: flex;
+    margin-top: 5em;
+    gap: 15px;
+    flex-wrap: wrap;
+    /* padding: 0 15px; */
+}
+
+.galeria-items {
+    /* background-color: royalblue; */
+    background-color: #f2f2f2;
+    width: 340px;
+    height: 240px;
+    flex-grow: 1;
+    border: 5px solid #f2f2f2;
+    overflow: hidden;
+    border-radius: 1em;
+}
+
+.galeria-items img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5em;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: all .5s linear;
+}
+
+.galeria-items img:hover {
+    filter: grayscale(0%);
+    transform: scale(130%);
+}
+
+.slide {
+    background-color: #0007;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -999;
+    opacity: 0;
+    transition: all .2.5s linear;
+
+}
+
+.slide:target {
+    z-index: 999;
+    opacity: 1;
+}
+
+.slide .imagem-container {
+    position: relative;
+    /* height: 75%;
+    width: 75%; */
+    width: auto;
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide .icones {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #0007;
+    color: #f2f2f2;
+    /* font-size: 2rem; */
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide .fechar {
+    top: 0;
+    right: 0;
+    font-size: 1rem;
+    border-radius: 0em 1.5em 0em 0em;
+}
+
+.slide .fechar:hover {
+    background-color: tomato;
+}
+
+.slide .anterior {
+    left: 0;
+    font-size: 1rem;
+    border-radius: 0em 0.5em 0.5em 0em;
+
+}
+
+.slide .anterior:hover {
+    background-color: tomato;
+}
+
+.slide .proximo {
+    right: 0;
+    font-size: 1rem;
+    border-radius: 0.5em 0em 0em 0.5em;
+}
+
+.slide .proximo:hover {
+    background-color: tomato;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1.5em;
+}
+
+
+footer {
+    /* height: 10%; */
+    height: 100px;
+    width: 100%;
+    /* height: 50px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f2f2f2;
+    font-style: italic;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: orange;
+    /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: blue;
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+    border: 3px solid orange;
+    /* creates padding around scroll thumb */
+}
+
+@media (max-width: 1288px) {
+
+    body {
+        padding: 0.5em;
+        height: auto;
+    }
+
+    header {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+
+    .main-container {
+        min-height: 10%;
+        width: 100%;
+    }
+
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
